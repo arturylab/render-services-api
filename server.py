@@ -3,7 +3,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from apis import helloworld
+from apis import helloworld, speedtest
 
 app = FastAPI()
 
@@ -18,6 +18,7 @@ app.add_middleware(
 
 # Register routers with prefix
 app.include_router(helloworld.router, prefix="/api/helloworld")
+app.include_router(speedtest.router, prefix="/api/speedtest")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
