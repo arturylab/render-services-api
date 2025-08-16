@@ -3,7 +3,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from apis import helloworld, speedtest
+from apis import helloworld
 
 app = FastAPI()
 
