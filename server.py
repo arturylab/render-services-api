@@ -18,7 +18,6 @@ app.add_middleware(
 
 # Register routers with prefix
 app.include_router(helloworld.router, prefix="/api/helloworld")
-app.include_router(speedtest.router, prefix="/api/speedtest")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
